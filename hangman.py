@@ -1,7 +1,7 @@
 import random
 a=random.randint(0,147)
 b=random.randint(0,16)
-f = open("py\hangman\words4.txt", "r")
+f = open("words4.txt", "r")
 c=f.readlines()[a]
 c=c[:84]
 d=c.split(" ")
@@ -23,6 +23,7 @@ while True:
         break
     print("".join(emptyword)," | ",guessed)
     guess=input("Type letter:")
+    guess=guess.lower()
     if len(guess)==1 and guess not in guessed:
         if guess in word:
             for e in range(len(word)):
@@ -34,6 +35,6 @@ while True:
 if i<7:
     print("You WON!!!")
 else:
-    print("Maybe next time:(")
+    print("Maybe next time :(")
 print("The word is",word.upper())
     

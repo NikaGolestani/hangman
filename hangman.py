@@ -1,7 +1,7 @@
 import random
 a=random.randint(0,147)
 b=random.randint(0,16)
-f = open("py\hangman\words4.txt", "r")
+f = open("words4.txt", "r")
 c=f.readlines()[a]
 c=c[:84]
 d=c.split(" ")
